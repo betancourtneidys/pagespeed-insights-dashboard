@@ -98,7 +98,7 @@
               // Generar HTML con los resultados
               Object.keys(metric).forEach(function(key) {
                 var category = metric[key];
-                var score = category.score ? category.score * 100 : 'Not available';
+                var score = category.score ? category.score : 'Not available';
 
                 // Crear tarjeta para cada categoría
                 metricsHtml += `

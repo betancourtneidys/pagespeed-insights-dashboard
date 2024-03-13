@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## PageSpeed Insights Dashboard
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+PageSpeed Insights Dashboard es una aplicación web desarrollada en Laravel, que permite a los usuarios introducir URLs de sitios web para obtener métricas de rendimiento, accesibilidad, prácticas recomendadas y SEO utilizando la API de PageSpeed Insights. Los usuarios pueden visualizar los resultados en un formato amigable y guardar el historial de pruebas para futuras consultas.
 
-## About Laravel
+## Descripción
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto nació de la necesidad de monitorear el rendimiento de varios sitios web de forma centralizada y amigable. Con PageSpeed Insights Dashboard, los usuarios pueden:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Ingresar URLs para obtener métricas de rendimiento en tiempo real.**
+- **Seleccionar diferentes estrategias de análisis (móvil/desktop).**
+- **Guardar y visualizar el historial de métricas para cada sitio.**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instalación
 
-## Learning Laravel
+- **Requisitos Previos**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Asegúrate de tener instalado PHP (>=8.1), Composer y Laravel (10.x) en tu sistema.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Pasos de Instalación**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Para instalar y configurar el proyecto en tu entorno local, sigue estos pasos:
 
-## Laravel Sponsors
+```sh
+  # Clonar el repositorio
+  git clone https://github.com/betancourtneidys/pagespeed-insights-dashboard.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+  # Cambiar al directorio del proyecto
+  cd pagespeed-insights-dashboard
 
-### Premium Partners
+  # Instalar dependencias de PHP
+  composer install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+  # Copiar el archivo de entorno y configurar tus claves de API
+  cp .env.example .env
+  nano .env
 
-## Contributing
+  # Generar la clave de la aplicación
+  php artisan key:generate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+  # Ejecutar las migraciones de la base de datos (SQLite o MySQL)
+  php artisan migrate
 
-## Code of Conduct
+  # Iniciar el servidor de desarrollo de Laravel
+  php artisan serve
+```
+Ahora puedes acceder al proyecto en http://localhost:8000
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Uso
 
-## Security Vulnerabilities
+Después de instalar el proyecto, visita http://localhost:8000 en tu navegador. Desde allí, puedes:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Ingresar la URL del sitio que deseas analizar.
+2. Seleccionar las categorías de métricas que te interesan.
+3. Elegir la estrategia de análisis (móvil o escritorio).
+4. Hacer clic en "Obtener Métrica" para ver los resultados.
+5. Opcionalmente, guardar los resultados para consultarlos más tarde.
 
-## License
+## Configuración
+
+Para personalizar el funcionamiento de la aplicación, puedes modificar las variables en el archivo .env, incluyendo tu propia clave API de PageSpeed Insights.
+
+## Contacto
+
+Neidys Betancourt - [https://www.linkedin.com/in/betancourtneidys](https://www.linkedin.com/in/betancourtneidys) - betancourtneidys@gmail.com
+
+Link del Proyecto: [https://github.com/betancourtneidys/pagespeed-insights-dashboard](https://github.com/betancourtneidys/pagespeed-insights-dashboard).
+
+## Licencia
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Créditos
+
+[Google PageSpeed Insights API](https://developers.google.com/speed/docs/insights/rest?hl=es-419).

@@ -19,7 +19,7 @@ class MetricsController extends Controller
         $strategies = Strategy::all();
 
         // Retorna la vista pasando las categorías y estrategias
-        return view('metrics_form', compact('categories', 'strategies'));
+        return view('metrics-form', compact('categories', 'strategies'));
     }
 
     // Método para hacer la solicitud a la API de Google PageSpeed Insights
