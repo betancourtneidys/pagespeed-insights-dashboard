@@ -108,7 +108,7 @@
                         <h4 class="my-0 fw-normal">${category.title}</h4>
                       </div>
                       <div class="card-body">
-                        <h1 class="fw-medium d-flex justify-content-center">${typeof score === 'number' ? score.toFixed(2) + '%' : score}</h1>
+                        <h1 class="fw-medium d-flex justify-content-center">${typeof score === 'number' ? score.toFixed(2) : score}</h1>
                       </div>
                     </div>
                   </div>
